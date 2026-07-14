@@ -27,3 +27,42 @@ df2 <- df %>%
   group_by(Lion, Prey) %>%
   summarise(nb_killed = sum(is_killed)) %>%
   arrange(desc(nb_killed))
+
+
+install.packages("ggplot2")
+library(ggplot2)
+
+data()
+
+mydata <- cars
+
+View(mydata)
+
+summary(mydata)
+mean(mydata$speed)
+median(mydata$dist)
+
+plot(mydata$speed, mydata$dist)
+
+# --- To get help and information for some commands, using the sign ? ---
+
+?plot
+
+?cor
+
+?ggplot2
+
+# --- To check the correlation between two continuous variables ---
+
+cor.test(mydata$speed, mydata$dist)
+
+# --- To check the linear model ---
+
+model1 <- lm(dist~speed, data=mydata)
+
+summary(model1)
+
+# --- attach() methods help to to say what dataset we are working with ---
+
+attach(mydata)
+cor.test(speed, dist)
