@@ -86,3 +86,5 @@ data.frame(Name, Age, Score, work_type)
 
 student_data <- data.frame(Name, Age, Score, work_type)
 student_data
+
+getwd()
