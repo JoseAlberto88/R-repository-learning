@@ -53,3 +53,19 @@ table (ages > 21)
 install.packages("tidyverse")  # once
 library(tidyverse)
 ?tidyverse
+
+# --- CALCULATIONS WITH R ----
+
+
+Name <- c("Alice", "Brian", "Carlos", "Diana", "Emily")
+Age <- c(25, 35, 24, 25, 34)
+Score <- c(85, 90, 88, 92, 88)
+work_type <- c("Part time", "Part time", "Full time", "Part time", "Full time")
+
+table(Name)
+table(Age)
+
+student_table <- table(Name)
+student_table <- table(Age)
+student_table
+
