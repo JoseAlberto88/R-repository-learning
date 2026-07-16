@@ -40,3 +40,16 @@ sort(ages)
 sort(ages, decreasing = TRUE)
 # To give the descriptive analysis
 summary(ages)
+
+table(ages)  # Frequency table
+
+table (ages > 21)
+
+
+# To get more information omn the function itself
+?mean
+
+# Install and load Packages: Collections of R functions and data sets
+install.packages("tidyverse")  # once
+library(tidyverse)
+?tidyverse
