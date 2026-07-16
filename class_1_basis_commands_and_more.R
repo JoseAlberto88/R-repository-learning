@@ -19,3 +19,24 @@ rm(a, c, d)  # we can do this in the console
 
 # Click on the broom icon in your global environment to delete all the variables
 
+# Let's create larger vectors:
+ages <- c(25, 35, 24, 25, 34, 33, 34, 26, 27, 20, 20, 23, 22, 28)
+
+# Built in functions for descriptive statistics:
+length(ages)
+mean(ages)
+median(ages)
+max(ages)
+min(ages)
+
+mean_ages <- mean(ages)
+
+mean_ages
+
+sort(ages)
+# to give us the signature of the function
+?sort
+
+sort(ages, decreasing = TRUE)
+# To give the descriptive analysis
+summary(ages)
