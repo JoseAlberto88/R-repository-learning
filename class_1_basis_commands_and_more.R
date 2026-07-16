@@ -69,3 +69,20 @@ student_table <- table(Name)
 student_table <- table(Age)
 student_table
 
+
+# To know teh type of the data
+typeof(Name)
+
+
+# Before we create a data frame we need to check the variable length
+
+length(Name) == length(Age) &&
+  length(Name) == length(Score) &&
+  length(Name) == length(work_type) &&
+  
+# Create a data frame with these variables
+data.frame(Name, Age, Score, work_type)
+?data.frame
+
+student_data <- data.frame(Name, Age, Score, work_type)
+student_data
