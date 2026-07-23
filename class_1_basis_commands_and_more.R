@@ -88,3 +88,9 @@ student_data <- data.frame(Name, Age, Score, work_type)
 student_data
 
 getwd()
+
+# Now to save a data frame to your computer
+write.csv(student_data, file="student_data.csv", row.names = T)
+?write.csv
+
+
