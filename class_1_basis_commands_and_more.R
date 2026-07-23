@@ -179,5 +179,5 @@ mtcars_new <- mtcars |>
   mutate(weight_kg = wt * 1000 * 0.453592) |>  # mutate()
   arrange(-mpg)         # arrange()
 
-mtcars_new
+print(mtcars_new)
   
