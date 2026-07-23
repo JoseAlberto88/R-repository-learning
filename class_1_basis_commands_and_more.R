@@ -129,3 +129,55 @@ sapply(df_3, sd) # Stahdar deviation from the mean for all variables
 # Installing and loading packages ----
 
 library(tidyverse)
+
+library(dplyr)
+# filter() select rows that meet certain conditions
+
+data <- mtcars
+head(data)
+
+head(data, 8)
+
+# %<% the pipe operator
+
+data_4 <- mtcars %>%
+  filter(cyl == 4)
+
+data_4
+
+# Select() choose columns to keep
+mtcars %>%
+  select(mpg, hp, wt)          # Keep only the selected columns
+
+
+# mutate() create new variables 
+# Create a new column for kpl
+new.data <- mtcars |> 
+  mutate(kpl = mpg * 0.45144)
+
+head(new.data)
+
+# relocate a new column
+data_new <- new.data |> 
+  relocate(kpl, .after = mpg)
+
+data_new
+
+data |> 
+  arrange(hp)
+
+# group_by() plus summaries() Group data for grouped summaries
+mtcars |> 
+  group_by(cyl) |> 
+  summarise(avg_mpg = mean(mpg))  # Average mpg by number of cylinders
+
+
+# we can also add all these commands up
+mtcars_new <- mtcars |> 
+  filter(mpg > 20, hp < 150) |>  # Filter() select only the cars with 
+  select(mpg, cyl, hp, wt, gear) |>  # select() 
+  mutate(weight_kg = wt * 1000 * 0.453592) |>  # mutate()
+  arrange(-mpg)         # arrange()
+
+mtcars_new
+  
