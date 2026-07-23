@@ -94,3 +94,38 @@ write.csv(student_data, file="student_data.csv", row.names = T)
 ?write.csv
 
 
+# to read a data set use "read.csv" function or use "Import"
+
+read.csv("enamp_sample_telemetry_10k.csv")
+df_1 <- read.csv("enamp_sample_telemetry_10k.csv")
+
+df_2 <- read.csv('C:/Users/piuze/OneDrive/Escritorio/University of Niagara Falls/Career Services/Enamp/enamp_sample_telemetry_10k.csv')
+
+file_path <- 'C:/Users/piuze/OneDrive/Escritorio/University of Niagara Falls/Career Services/Enamp/enamp_sample_telemetry_10k.csv'
+
+df_3 <- read.csv(file_path)
+
+
+# IMPORTANT: In R, you must replace all \ backslashes with / forward
+
+# to display a dataset
+
+head(df_3, 5)
+
+# to explore the data set strcuture
+
+str(df_3)
+dim(df_3)
+colnames(df_3)
+summary(df_3)
+
+# Descriptive statistics ----
+attach(df_3)
+sd(voltage)
+mean(df_3$voltage)
+var(df_3$voltage)
+sapply(df_3, sd) # Stahdar deviation from the mean for all variables
+
+# Installing and loading packages ----
+
+library(tidyverse)
