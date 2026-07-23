@@ -180,4 +180,13 @@ mtcars_new <- mtcars |>
   arrange(-mpg)         # arrange()
 
 print(mtcars_new)
-  
+
+# Data cleaning ----
+
+
+attach(mtcars)
+Q1 <- quantile(hp, 0.25)
+Q3 <- quantile(hp, 0.75)
+IQR_value <- IQR(hp)
+lower_bound <- Q1 - 1.5 * IQR_value
+upper_bound <- Q3 + 1.5 * IQR_value
